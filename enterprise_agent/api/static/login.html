@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录 · 云帆科技服务台</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+        body {
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+
+        .card {
+            width: 400px; padding: 48px 32px;
+            background: white; border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.2); text-align: center;
+        }
+        .card h1 { font-size: 22px; color: #1f2937; margin-bottom: 4px; }
+        .card .subtitle { font-size: 13px; color: #6b7280; margin-bottom: 32px; }
+        .card .subtitle::before { content: "🤖 "; }
+
+        /* SSO 登录按钮 */
+        .sso-btn {
+            width: 100%; height: 52px; border-radius: 10px;
+            border: none; cursor: pointer; font-size: 15px; font-weight: 500;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            transition: transform .1s, box-shadow .2s;
+        }
+        .sso-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+        .sso-btn:active { transform: translateY(0); }
+
+        .btn-wechat { background: #07c160; color: white; }
+        .btn-wechat:hover { background: #06ad56; }
+        .btn-wechat::before { content: "💬"; font-size: 20px; }
+
+        .btn-dingtalk { background: #1677ff; color: white; margin-top: 12px; }
+        .btn-dingtalk::before { content: "🔵"; font-size: 18px; }
+
+        .btn-ad { background: #6b7280; color: white; margin-top: 12px; }
+        .btn-ad::before { content: "🪪"; font-size: 18px; }
+
+        /* Mock 员工选择弹层 */
+        .modal-mask {
+            position: fixed; inset: 0; background: rgba(0,0,0,.4);
+            display: none; align-items: center; justify-content: center; z-index: 999;
+        }
+        .modal-mask.show { display: flex; }
+        .modal {
+            width: 320px; background: white; border-radius: 12px; padding: 24px;
+        }
+        .modal h3 { font-size: 16px; color: #1f2937; margin-bottom: 16px; text-align: center; }
+        .modal .tip { font-size: 12px; color: #9ca3af; text-align: center; margin-bottom: 16px; }
+
+        .emp-list { display: flex; flex-direction: column; gap: 8px; }
+        .emp-item {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px;
+            cursor: pointer; transition: all .15s;
+        }
+        .emp-item:hover { border-color: #2563eb; background: #eff6ff; }
+        .emp-item .emp-avatar { font-size: 24px; }
+        .emp-item .emp-info { flex: 1; text-align: left; }
+        .emp-item .emp-name { font-size: 14px; color: #1f2937; }
+        .emp-item .emp-id { font-size: 12px; color: #9ca3af; }
+
+        .error {
+            background: #fef2f2; color: #dc2626;
+            padding: 10px 14px; border-radius: 8px; font-size: 13px;
+            margin-bottom: 16px; display: none;
+        }
+        .error.show { display: block; }
+
+        .tag {
+            display: inline-block; font-size: 11px; padding: 2px 8px;
+            background: #fef3c7; color: #d97706; border-radius: 10px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>登录小帆</h1>
+    <div class="subtitle">云帆科技内部 AI 助手</div>
+
+    <div class="error" id="errorBox"></div>
+
+    <button class="sso-btn btn-wechat" onclick="pickMockUser('wechat')">企业微信扫码登录</button>
+    <button class="sso-btn btn-dingtalk" onclick="pickMockUser('dingtalk')">钉钉扫码登录</button>
+    <button class="sso-btn btn-ad" onclick="pickMockUser('ad')">AD 域账号登录</button>
+
+    <div class="tag">🔧 演示模式 · 请选择一位模拟员工</div>
+</div>
+
+<!-- 员工选择弹层（Mock SSO 用） -->
+<div class="modal-mask" id="modalMask" onclick="closeModal(event)">
+    <div class="modal">
+        <h3>👤 选择登录身份</h3>
+        <div class="tip">演示模式：企业微信扫码会自动识别身份，这里选一位员工</div>
+        <div class="emp-list" id="empList"></div>
+    </div>
+</div>
+
+<script>
+    let mockUsers = {};
+
+    // 页面加载时拉 Mock 员工列表
+    fetch("/api/v1/auth/sso/mock-users")
+        .then(r => r.json())
+        .then(data => {
+            mockUsers = data.users || {};
+        });
+
+    function pickMockUser(platform) {
+        // 真实 SSO：跳转到平台扫码授权页（sso.get_login_url()）
+        // Mock SSO：弹出员工选择框
+        if (Object.keys(mockUsers).length === 0) {
+            fetch("/api/v1/auth/sso/mock-users")
+                .then(r => r.json())
+                .then(data => {
+                    mockUsers = data.users || {};
+                    showModal();
+                });
+        } else {
+            showModal();
+        }
+    }
+
+    function showModal() {
+        const listEl = document.getElementById("empList");
+        listEl.innerHTML = "";
+        Object.entries(mockUsers).forEach(([key, info]) => {
+            const div = document.createElement("div");
+            div.className = "emp-item";
+            div.onclick = () => doMockLogin(key);
+            div.innerHTML = `
+                <div class="emp-avatar">${info.avatar || "👤"}</div>
+                <div class="emp-info">
+                    <div class="emp-name">${info.username}</div>
+                    <div class="emp-id">工号 ${info.user_id}</div>
+                </div>
+            `;
+            listEl.appendChild(div);
+        });
+        document.getElementById("modalMask").classList.add("show");
+    }
+
+    function closeModal(e) {
+        if (e.target.id === "modalMask") {
+            document.getElementById("modalMask").classList.remove("show");
+        }
+    }
+
+    async function doMockLogin(key) {
+        document.getElementById("modalMask").classList.remove("show");
+
+        try {
+            const resp = await fetch("/api/v1/auth/sso/exchange", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ mock_user_key: key }),
+            });
+            const data = await resp.json();
+            if (!resp.ok) { showError(data.detail); return; }
+
+            // 登录成功：token 存 localStorage，跳聊天页
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("username", data.username);
+            localStorage.setItem("avatar", data.avatar || "👤");
+            window.location.href = "/";
+        } catch (err) {
+            showError("网络错误");
+        }
+    }
+
+    function showError(msg) {
+        const box = document.getElementById("errorBox");
+        box.textContent = msg;
+        box.classList.add("show");
+        setTimeout(() => box.classList.remove("show"), 3000);
+    }
+
+    // 已登录用户直接跳聊天页
+    if (localStorage.getItem("token")) {
+        window.location.href = "/";
+    }
+</script>
+</body>
+</html>

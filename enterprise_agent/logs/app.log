@@ -1,0 +1,174 @@
+2026-10-08 08:22:29 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 08:22:32 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 08:22:32 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 08:22:32 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 08:31:36 | INFO    | app | 收到消息 session=string text=string
+2026-10-08 08:31:38 | INFO    | app | 回复完成 session=string reply=你好！我是云帆科技企业服务台的智能助手小帆，很高兴为你服务～  
+请问有什么可以帮你的？比如：  
+- 查询IT或人事相关制度（如WiFi怎么连、年假怎么休）  
+- 查看工单进度  
+- 报修设备、
+2026-10-08 08:33:54 | INFO    | app | 收到消息 session=string text=string
+2026-10-08 08:33:56 | INFO    | app | 回复完成 session=string reply=你好！我是云帆科技企业服务台的智能助手小帆，很高兴为你服务～  
+请问有什么可以帮你的？比如：  
+- 查询IT或人事相关制度（如WiFi怎么连、年假怎么休）  
+- 查看工单进度  
+- 报修设备、
+2026-10-08 08:34:36 | INFO    | app | 收到消息 session=user_001 text=公司的密码有什么要求？
+2026-10-08 08:34:38 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 08:34:41 | INFO    | app | 知识库为空，开始导入文档：C:\Users\汪学涛\Desktop\新建文件夹 (4)\enterprise_agent\data\knowledge
+2026-10-08 08:34:41 | INFO    | app | 知识库初始化完成，共导入 4 个文档片段
+2026-10-08 08:34:45 | INFO    | app | 回复完成 session=user_001 reply=根据公司《IT 设备与网络使用规范（2026 版）》，密码要求如下：
+
+- 密码长度**至少 10 位**；  
+- 必须**同时包含**：大写字母、小写字母、数字和特殊符号；  
+- 每 **90 
+2026-10-08 09:26:07 | INFO    | app | 收到消息 session=111 text=你好
+2026-10-08 09:26:08 | INFO    | app | 回复完成 session=111 reply=你好！我是云帆科技企业服务台的智能助手小帆，很高兴为你服务～  
+请问有什么可以帮您的？😊
+2026-10-08 09:26:23 | INFO    | app | 收到消息 session=111 text=查一下工资
+2026-10-08 09:26:26 | INFO    | app | 回复完成 session=111 reply=你好！关于工资查询，目前系统不支持通过服务台直接查看工资明细。  
+你可以通过以下方式自助查询：
+
+- 登录公司HR系统「云帆人力平台」→ 进入【薪酬福利】→ 【工资条】查看当月及历史工资单；  
+-
+2026-10-08 14:32:47 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:32:47 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 14:33:01 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 14:33:02 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:33:02 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 14:33:02 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 14:33:34 | INFO    | app | 收到消息 session=user_001 text=我入职3年了，年假有几天？
+2026-10-08 14:33:35 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 14:33:39 | INFO    | app | 回复完成 session=user_001 reply=根据《云帆科技员工请假管理制度（2026 版）》，您入职满3年（已满1年不满5年），**享有带薪年假5天**。
+
+温馨提示：  
+- 年假当年有效，如因工作原因未休完，经部门负责人审批后可延期至次年3
+2026-10-08 14:35:26 | INFO    | app | 收到消息 session=111 text=帮我查查TK-1001工单
+2026-10-08 14:35:30 | INFO    | app | 回复完成 session=111 reply=已查到工单 TK-1001 的最新状态：
+
+- **标题**：电脑无法开机  
+- **状态**：处理中  
+- **优先级**：高  
+- **处理人**：IT-王工  
+- **创建时间**：20
+2026-10-08 14:38:16 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 14:38:16 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:38:16 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 14:38:16 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 14:38:36 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 14:38:36 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 14:38:36 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 14:38:36 | INFO    | app | 发现新文档：travel_policy.md
+2026-10-08 14:38:37 | INFO    | app | 收到消息 session=user_002 text=出差住宿标准是多少？
+2026-10-08 14:38:42 | INFO    | app | 回复完成 session=user_002 reply=根据《云帆科技差旅报销管理制度（2026 版）》，公司出差住宿标准如下：
+
+- **普通员工**：  
+  - 一线城市（北京、上海、广州、深圳）：**500 元/晚**  
+  - 其他城市：**4
+2026-10-08 14:41:08 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 14:41:08 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 14:41:08 | INFO    | app | 发现新文档：travel_policy.md
+2026-10-08 14:43:56 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 14:43:57 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:43:57 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 14:43:57 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 14:44:17 | INFO    | app | 收到消息 session=user_003 text=我的电脑用了4年了，能申请换新的吗？
+2026-10-08 14:44:18 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 14:44:19 | INFO    | app | 知识库为空，开始导入文档：C:\Users\汪学涛\Desktop\新建文件夹 (4)\enterprise_agent\data\knowledge
+2026-10-08 14:44:19 | INFO    | app | 知识库初始化完成，共导入 6 个文档片段
+2026-10-08 14:44:19 | INFO    | app | 发现新文档：equipment_policy.md
+2026-10-08 14:44:19 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 14:44:19 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 14:44:19 | INFO    | app | 发现新文档：travel_policy.md
+2026-10-08 14:44:24 | INFO    | app | 回复完成 session=user_003 reply=根据公司《办公设备申请制度（2026版）》，您使用电脑已满4年，**符合“在职员工设备使用超过3年可申请更换”的条件**，可以申请更换新电脑。
+
+接下来您可以：
+✅ 登录 OA 系统，提交“设备申请单
+2026-10-08 14:45:28 | INFO    | app | 发现新文档：equipment_policy.md
+2026-10-08 14:45:28 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 14:45:28 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 14:45:28 | INFO    | app | 发现新文档：travel_policy.md
+2026-10-08 14:48:26 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 14:48:27 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:48:27 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 14:48:27 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 14:50:49 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 14:50:50 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:50:50 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 14:50:50 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 14:55:34 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 14:55:35 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 14:55:35 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:07:35 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 15:07:35 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 15:07:35 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:07:58 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 15:07:58 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 15:07:58 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:07:58 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 15:12:03 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 15:12:03 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 15:12:03 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:12:03 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 15:12:38 | INFO    | app | 收到流式消息 session=user_1 text=密码要求
+2026-10-08 15:12:40 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 15:12:41 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:12:41 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:12:46 | INFO    | app | 流式回复完成 session=user_1 length=0
+2026-10-08 15:13:04 | INFO    | app | 收到流式消息 session=user_E1001 text=密码要求
+2026-10-08 15:13:05 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:13:05 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:13:10 | INFO    | app | 流式回复完成 session=user_E1001 length=0
+2026-10-08 15:14:01 | INFO    | app | 收到流式消息 session=user_E1001 text=你好
+2026-10-08 15:14:02 | INFO    | app | 流式回复完成 session=user_E1001 length=0
+2026-10-08 15:14:26 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 15:14:27 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 15:14:27 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:14:27 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 15:15:38 | INFO    | app | 收到流式消息 session=user_E1001 text=你好·
+2026-10-08 15:15:39 | INFO    | app | 流式回复完成 session=user_E1001 length=43
+2026-10-08 15:15:52 | INFO    | app | 收到流式消息 session=user_E1001 text=你好
+2026-10-08 15:15:54 | INFO    | app | 流式回复完成 session=user_E1001 length=145
+2026-10-08 15:16:05 | INFO    | app | 收到流式消息 session=user_E1001 text=密码设置
+2026-10-08 15:16:06 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 15:16:07 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:16:07 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:16:13 | INFO    | app | 流式回复完成 session=user_E1001 length=2104
+2026-10-08 15:17:22 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 15:17:23 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 15:17:23 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:17:23 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 15:17:41 | INFO    | app | 收到流式消息 session=user_E1001 text=??
+2026-10-08 15:17:42 | INFO    | app | 收到流式消息 session=user_E1001 text=离职手续
+2026-10-08 15:17:43 | DEBUG   | app | STREAM chunk type=AIMessage content_type=str content="'正在为你查询公司离职手续的相关规定……  \\n\\n'"
+2026-10-08 15:17:43 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 15:17:44 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:17:44 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:17:44 | DEBUG   | app | STREAM chunk type=ToolMessage content_type=str content='\'【资料1】来源文件：C:\\\\Users\\\\汪学涛\\\\Desktop\\\\新建文件夹 (4)\\\\enterprise_agent\\\\data\\\\knowledge\\\\leave_policy.md\\n## 四、请假办理流程\\n1. 所有请假均须在 OA 系统"人事服务-请假申请"中提前提交，注明请假类型、起止时间和工作交接人。\\n2. 审批通过后系统自动同步给考勤专员，无需另行登记。\\n3. 遇 O'
+2026-10-08 15:17:45 | DEBUG   | app | STREAM chunk type=AIMessage content_type=str content="'正在为你查询公司离职手续的相关规定……  \\n\\n'"
+2026-10-08 15:17:45 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:17:45 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:17:46 | DEBUG   | app | STREAM chunk type=ToolMessage content_type=str content='\'【资料1】来源文件：C:\\\\Users\\\\汪学涛\\\\Desktop\\\\新建文件夹 (4)\\\\enterprise_agent\\\\data\\\\knowledge\\\\leave_policy.md\\n## 四、请假办理流程\\n1. 所有请假均须在 OA 系统"人事服务-请假申请"中提前提交，注明请假类型、起止时间和工作交接人。\\n2. 审批通过后系统自动同步给考勤专员，无需另行登记。\\n3. 遇 O'
+2026-10-08 15:17:47 | DEBUG   | app | STREAM chunk type=AIMessage content_type=str content="'正在为你查询公司离职手续的相关规定……  \\n\\n\\n'"
+2026-10-08 15:17:47 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:17:47 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:17:47 | DEBUG   | app | STREAM chunk type=ToolMessage content_type=str content='\'【资料1】来源文件：C:\\\\Users\\\\汪学涛\\\\Desktop\\\\新建文件夹 (4)\\\\enterprise_agent\\\\data\\\\knowledge\\\\leave_policy.md\\n## 四、请假办理流程\\n1. 所有请假均须在 OA 系统"人事服务-请假申请"中提前提交，注明请假类型、起止时间和工作交接人。\\n2. 审批通过后系统自动同步给考勤专员，无需另行登记。\\n3. 遇 O'
+2026-10-08 15:17:51 | DEBUG   | app | STREAM chunk type=AIMessage content_type=str content="'我刚刚检索了知识库，但目前**未找到关于“离职手续”的具体制度文件**（现有资料仅涵盖请假流程）。\\n\\n不过别担心，离职属于重要人事流程，公司有标准操作规范。为确保你顺利办结，我可立即为你创建一个「人事服务」类工单，由HR专员主动联系你，提供完整指引（含OA操作步骤、材料清单、交接要求、离职证明开具等）。\\n\\n是否需要我现在就帮你创建工单？  \\n如需，请告诉我：  \\n🔹 你的姓名和工号（"
+2026-10-08 15:17:52 | INFO    | app | 流式回复完成 session=user_E1001 length=2396
+2026-10-08 15:17:56 | INFO    | app | 收到流式消息 session=user_E1001 text=密码要求
+2026-10-08 15:18:03 | DEBUG   | app | STREAM chunk type=AIMessage content_type=str content="'已为你查询公司密码管理规定，依据《云帆科技 IT 设备与网络使用规范（2026 版）》：\\n\\n✅ **办公系统密码必须满足以下全部要求**：  \\n- 长度 ≥ 10 位；  \\n- 同时包含：大写字母（A–Z）、小写字母（a–z）、数字（0–9）、特殊符号（如 `!@#$%^&*` 等）；  \\n- 每 90 天强制更换一次；  \\n- 不得与最近 5 次使用过的密码重复。\\n\\n❌ **禁"
+2026-10-08 15:18:03 | INFO    | app | 流式回复完成 session=user_E1001 length=403
+2026-10-08 15:18:41 | INFO    | app | 服务启动中，开始初始化 Agent ...
+2026-10-08 15:18:42 | INFO    | app | 主模型：qwen-plus；备用模型：doubao-seed-evolving（主模型失败自动切换）
+2026-10-08 15:18:42 | INFO    | app | 企业服务台 Agent 初始化完成，已装载工具：['search_knowledge_base', 'query_ticket', 'create_ticket', 'confirm_ticket']
+2026-10-08 15:18:42 | INFO    | app | 服务已就绪，监听 0.0.0.0:8000
+2026-10-08 15:18:50 | INFO    | app | 收到流式消息 session=user_E1001 text=密码要求
+2026-10-08 15:18:58 | INFO    | app | 流式回复完成 session=user_E1001 length=403
+2026-10-08 15:19:32 | INFO    | app | 收到流式消息 session=user_E1001 text=你好
+2026-10-08 15:19:34 | INFO    | app | 流式回复完成 session=user_E1001 length=124
+2026-10-08 15:19:41 | INFO    | app | 收到流式消息 session=user_E1001 text=年假查询
+2026-10-08 15:19:43 | INFO    | app | 向量模型初始化完成：text-embedding-v3
+2026-10-08 15:19:44 | INFO    | app | 发现新文档：it_policy.md
+2026-10-08 15:19:44 | INFO    | app | 发现新文档：leave_policy.md
+2026-10-08 15:19:51 | INFO    | app | 流式回复完成 session=user_E1001 length=449
